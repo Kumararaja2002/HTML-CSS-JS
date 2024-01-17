@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter text-box</title>
+    <style>
+        .textBox{
+           width: 300px;
+            border-color: white;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border: none;
+            vertical-align: middle;
+        }
+        .tweet-button{
+            padding: 10px;
+            background-color: rgb(100, 136, 255);
+            color: white;
+            border-radius: 50px;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: inherit;
+            vertical-align: middle;
+        }
+        .tweet-button:hover{
+            opacity: 0.1;
+        }
+        .image-element{
+            display: inline;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-bottom: 20px;
+            object-fit: cover;
+            padding: 5px;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            object-position: left;
+            background-color: black;
+            border-radius: 40px;
+
+        }
+        .text-adjustment,
+        .button-style{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <img class="image-element"src="images/scissors-emoji.png">
+    <input class="textBox"type="text" placeholder="What's happening?">
+    <button class="tweet-button">Tweet</button>
+    <p></p>
+    <p class="text-adjustment">Thanks for chatting with our customer support.
+Would you like to take our quick survey? </p>
+    <button class="button-style">Yes</button>
+    <button class="button-style">No</button>
+    
+</body>
+</html>

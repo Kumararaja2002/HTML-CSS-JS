@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        .block-element{
+            display: inline-block;
+            margin: 3px;
+        }
+        .cat-image{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .name-font{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-left: 5px;
+            display:block;
+        }
+        .mutual{
+            width: 25px;
+            border-radius: 50px;
+            height:25px;
+            margin:none;
+            display: inline-block;
+            vertical-align: top;
+            z-index: 10px;
+        }
+        .mutual-font{
+            color: rgb(212, 198, 198);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 200;
+            display: inline-block;
+            margin: none;
+            vertical-align: top;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 5px;
+            font-size: 12px;
+        }
+        .add-friend-button{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgba(23, 23, 249, 0.873);
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            display: block;
+            margin-top: 5px;
+        }
+        .mutual1{
+            width: 25px;
+            border-radius: 50px;
+            height:25px; 
+            display: inline-block;
+            vertical-align: top;
+            opacity: 0.6;
+            vertical-align: left;
+        }
+        .inner-box{
+            vertical-align: top;
+            margin-top: 0px;
+            padding: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            width: 140px;
+        }
+        .add-friend-button:hover{
+            opacity: 0.6;
+        }
+        .following-element{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: blue;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="block-element">
+        <div>
+            <img class="cat-image"src="images/cat.jpg">
+            <div class="inner-box">
+            <p class="name-font">
+                Oliver
+            </p>
+            <img src="images/cat2.jpg"class="mutual">
+            <img class="mutual1"src="images/dog.jpg">
+            <p class="mutual-font"> 2 mutual friends</p>
+            <button onclick="
+            addedAsFrnd()
+            followingLogic();"class="add-friend-button added">Add Friend</button>
+        </div>
+        </div>
+        </div>
+    
+    <div class="block-element">
+        <div>
+            <img class="cat-image"src="images/cat2.jpg">
+            <div class="inner-box">
+            <p class="name-font">
+                Mimi
+            </p>
+            <img src="images/cat2.jpg"class="mutual">
+            <img src="images/dog.jpg"class="mutual1">
+            
+            <p class="mutual-font"> 2 mutual friends</p>
+            <button onclick="
+            addedAsFrnd1();" class="add-friend-button added-1">Add Friend</button>
+        </div>
+        </div>
+        </div>
+        <div class="block-element">
+            <div>
+                <img class="cat-image"src="images/dog.jpg">
+                <div class="inner-box">
+                <p class="name-font">
+                    Rex
+                </p>
+                <img src="images/cat2.jpg"class="mutual">
+                <img class="mutual"src="images/cat.jpg">
+                <p class="mutual-font"> 2 mutual friends</p>
+                <button onclick="
+                addedAsFrnd2();" class="add-friend-button added-2">Add Friend</button>
+            </div>
+            </div>
+        </div>
+
+        <p class="following-element">Following:0</p>
+    <script>
+        let follow = 0;
+        function addedAsFrnd(){
+            let friend = document.querySelector('.added');
+            if(friend.innerHTML === 'Add Friend'){
+                friend.innerHTML = 'Added✔';
+                follow+=1;
+                document.querySelector('.following-element')
+                    .innerHTML = `Following:${follow}`;
+            }
+            else{
+                friend.innerHTML = 'Add Friend';
+                follow-=1;
+                document.querySelector('.following-element')
+                    .innerHTML = `Following:${follow}`;
+            }
+        }
+        function addedAsFrnd1(){
+            let friend = document.querySelector('.added-1');
+            if(friend.innerHTML === 'Add Friend'){
+                friend.innerHTML = 'Added✔';
+                follow+=1;
+                document.querySelector('.following-element')
+                    .innerHTML = `Following:${follow}`;
+            }
+            else{
+                friend.innerHTML = 'Add Friend';
+                follow-=1;
+                document.querySelector('.following-element')
+                    .innerHTML = `Following:${follow}`;
+            }
+        }
+        function addedAsFrnd2(){
+            let friend = document.querySelector('.added-2');
+            if(friend.innerHTML === 'Add Friend'){
+                friend.innerHTML = 'Added✔';
+                follow+=1;
+                document.querySelector('.following-element')
+                    .innerHTML = `Following:${follow}`;
+            }
+            else{
+                friend.innerHTML = 'Add Friend';
+                follow-=1;
+                document.querySelector('.following-element')
+                    .innerHTML = `Following:${follow}`;
+            }
+        }
+        /*let following = 0;
+        function followingLogic(){
+            follow = document.querySelector('.following-element');
+            if(friend.innerHTML === 'Add Friend'){
+                follow.innerHTML = `Following:${following++}`;
+            }
+            else{
+                follow.innerHTML = `Following:${following--}`;
+            }
+        }*/
+    </script>
+</body>
+</html>

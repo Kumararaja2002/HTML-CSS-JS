@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swtichButtonElementbuttons</title>
+    <style>
+        .button-style{
+            border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        }
+        .onRunning{
+            background-color: green;
+            color:white;
+        }
+        
+    </style>
+</head>
+<body>
+    <button onclick="
+        isToggledOnGaming();"
+    class="js-onToggled1 button-style "
+    >Gaming</button>
+
+    <button onclick="
+    isToggledOnSpotify();"
+    class="js-onToggled2 button-style "
+    >Spotify</button>
+
+    <button onclick="
+    isToggledOnNetflix();"
+    class="js-onToggled3 button-style "
+    >Netflix</button>
+    <script>
+        function isToggledOnGaming(){
+            let swtichButtonElement= dtocument.querySelector('.js-onToggled1');
+            if(swtichButtonElement.innerText === 'Gaming'){
+                swtichButtonElement.innerHTML = 'Running';
+                swtichButtonElement.classList.add('onRunning');
+            }
+            else{
+                swtichButtonElement.innerHTML = 'Gaming';
+                swtichButtonElement.classList.remove('onRunning');
+            }
+        }
+        function isToggledOnSpotify(){
+            let swtichButtonElement= document.querySelector('.js-onToggled2');
+            if(swtichButtonElement.innerText === 'Spotify'){
+                swtichButtonElement.innerHTML = 'Running';
+                swtichButtonElement.classList.add('onRunning');
+            }
+            else{
+                swtichButtonElement.innerHTML = 'Spotify';
+                swtichButtonElement.classList.remove('onRunning');
+            }
+        }
+        function isToggledOnNetflix(){
+            let swtichButtonElement= document.querySelector('.js-onToggled3');
+            if(swtichButtonElement.innerText === 'Netflix'){
+                swtichButtonElement.innerHTML = 'Running';
+                swtichButtonElement.classList.add('onRunning');
+            }
+            else{
+                swtichButtonElement.innerHTML = 'Netflix';
+                swtichButtonElement.classList.remove('onRunning');
+            }
+        }
+    </script>
+</body>
+</html>
