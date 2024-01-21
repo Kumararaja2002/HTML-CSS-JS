@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you tube</title>
+    <style>
+        .template,
+        .adjust{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 30px;
+            row-gap: 10px;
+
+        }
+        .dp-image{
+          width:300px;
+          height:200px
+        }
+        .side-elements{
+          background-color: rgb(231, 233, 233);
+          display: grid;
+          width: 50px;
+          align-items: top;
+          padding-left: 15px;
+              
+        }
+        .top-elements{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 15px;
+        }
+        .content-box{
+          display: flex;
+          flex:1;
+        }
+        .content{
+          display: grid;
+          grid-template-columns:1;
+        }
+        .profile-pic{
+          margin-top: 15px;
+          width: 30px;
+          height: 30px;
+          border-radius: 25px;
+          padding: 5px;
+          background-color: black;
+          display: inline-block;
+        }
+        .profile-pic1{
+          margin-top:0px;
+          width: 40px;
+          height: 40px;
+          border-radius: 25px;
+          padding: 5px;
+          background-color:transparent;
+        }
+        .profile-pic2{
+          width: 40px;
+          height: 40px;
+          background-color:transparent;
+          border:none;
+          margin-left: 20px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          padding: 10px;
+          align-items: center;
+          vertical-align: top;
+          border-radius: 30px;
+          cursor: pointer;
+          border-color: rgb(111, 111, 111);
+        }
+        .profile-insert{
+          width: 40px;
+          height: 40px;
+          align-items: left;
+          border-radius: 30px;
+          padding: 0px;
+          cursor: pointer;
+          background-color:transparent;
+          border: none;
+          border-color: rgb(111, 111, 111);
+        }
+        .content-row{
+          margin-top: none;
+          margin-left: 5px;
+          vertical-align: top;
+          align-items: top;
+        }
+        .line1{
+          font-weight: bold;
+          font-family: sans-serif;
+          margin-bottom: 0;
+        }
+        .line2{
+          color: gray;
+          font-size: small;
+          font-family: sans-serif;
+          margin-bottom: 0;
+        }
+        .line3{
+          color: gray;
+          font-size: small;
+          font-family: sans-serif;
+          margin-top:0;
+        }
+        .logo{
+          vertical-align: top;
+          align-items: center;
+          width:100px;
+          margin-left: 40px;
+        }
+        .search-button{
+          width: 60px;
+          height: 36px;
+          color: rgb(200, 200, 200);
+          border:none;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-top: 0px;
+          align-items: center;
+          cursor: pointer;
+        }
+        .top-elements{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .voice-search-button{
+          width: 40px;
+          height: 40px;
+          color: rgb(200, 200, 200);
+          border:none;
+          margin-left: 20px;
+          margin-top: 0px;
+          padding: 10px;
+          align-items: center;
+          vertical-align: top;
+          border-radius: 30px;
+          cursor: pointer;
+       
+        }
+        .option-button{
+          width: 40px;
+          height: 40px;
+          color: rgb(200, 200, 200);
+          border:none;
+          margin-left: 0;
+          margin-top: 0px;
+          padding: 10px;
+          align-items: center;
+          vertical-align: top;
+          border-radius: 30px;
+          cursor: pointer;
+        }
+        .search-box::placeholder{
+          font-family: sans-serif;
+          padding:10px;
+        }
+        .search-box{
+          width:300px;
+          height: 30px;
+          align-items: center;
+          border-color: rgb(111, 111, 111);
+          margin-left: 20px;
+          border: 2px solid #ccc;
+        }
+        .left-elements,
+        .middle-elements{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .right-elements{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+    </style>
+</head>
+<body>
+  <div class="top-elements">
+    <div class="left-elements" >
+      <button class="option-button"><img src="images/hamburger-menu.svg"></button>
+      <img class="logo" src="images/youtube-logo.svg">
+    </div>
+    <div class="middle-elements">
+    <input class="search-box" type="textbox" placeholder="search">
+    <button class="search-button"><img src="images/search.svg"></button>
+    <button class="voice-search-button"><img src="images/voice-search-icon.svg"></button>
+    </div>
+    <div class="right-elements">
+      <button class="voice-search-button"><img src="images/upload.svg"></button>
+      <button class="voice-search-button"><img src="images/youtube-apps.svg"></button>
+      <button class="voice-search-button"><img src="images/notifications.svg"></button>
+      <div class="profile-pic2">
+      <button ><img class="profile-insert" src="images/dog.jpg"></button>
+      </div>
+    </div>
+  </div>
+  
+    <div class="template">
+      <div class="side-elements">icons</div>
+      <div class="adjust">
+          <div class="content">
+           
+            <img class="dp-image"src="images/thumbnail-1.webp">
+            <div class="content-box">
+            <div><img class="profile-pic" src="images/paper-emoji.png"></div>
+            <div class="content-row">
+            <p class="line1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+            <p class="line2">Marques Brownlee</p>
+            <p class="line3">3.4M views · 6 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+           
+          <img class="dp-image"src="images/thumbnail-2.webp">
+          <div class="content-box">
+          <div><img class="profile-pic1" src="images/bee.webp"></div>
+          <div class="content-row">
+          <p class="line1">Try Not To Laugh Challenge #9</p>
+          <p class="line2"p>Mark Antony</p>
+          <p class="line3"p>19M views · 4 years ago</p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="content">
+           
+        <img class="dp-image"src="images/thumbnail-3.webp">
+        <div class="content-box">
+        <div><img class="profile-pic" src="images/scissors-emoji.png"></div>
+        <div class="content-row">
+        <p class="line1">Samsung New S24 ULTRA Review</p>
+        <p class="line2">Rone shan</p>
+        <p class="line3">244k views · 2 months ago</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="content">
+            
+        <img class="dp-image"src="images/thumbnail-4.webp">
+        <div class="content-box">
+        <div><img class="profile-pic1" src="images/cat2.jpg"></div>
+        <div class="content-row">
+        <p class="line1">Parithapangal - Addiction Troll</p>
+        <p class="line2">Gopi Sudhakar</p>
+        <p class="line3">1.4M views · 4 months ago</p>
+        </div>
+      </div>
+    </div>
+    
+      <div class="content">
+            
+        <img class="dp-image"src="images/dog.jpg">
+        <div class="content-box">
+        <div><img class="profile-pic" src="images/rock-emoji.png"></div>
+        <div class="content-row">
+        <p class="line1">Don't Believe Everything You Think</p>
+        <p class="line2">Kumararaja</p>
+        <p class="line3">32.4M views · 1 months ago</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="content">
+            
+        <img class="dp-image"src="images/thumbnail-6.webp">
+        <div class="content-box">
+        <div><img class="profile-pic1" src="images/cat.jpg"></div>
+        <div class="content-row">
+        <p class="line1">Kadane's Algorithm</p>
+        <p class="line2">Algo-Algo</p>
+        <p class="line3">254k views · 6 days ago</p>
+        </div>
+      </div>
+    </div>
+
+
+      </div>
+    </div>
+</body>
+</html>
